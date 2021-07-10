@@ -37,6 +37,10 @@ def collision():
     pygame.time.delay(500)
     game_state = "over"
 
+def aesthetics():
+    screen.blit(dino, dino_rect)
+    screen.blit(cacti, cactus_rect)
+
 while True:
     screen.fill((255, 255, 255))
     for event in pygame.event.get():
@@ -83,8 +87,7 @@ while True:
         score_show = score_font.render("Score: " + str(show_score), True, (0, 0, 0))
         screen.blit(score_show, (10, 10))   
         
-        screen.blit(dino, dino_rect)
-        screen.blit(cacti, cactus_rect)
+        aesthetics()
         
         ground_image()
         
