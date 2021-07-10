@@ -49,6 +49,8 @@ while True:
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_SPACE:
                         dino_y_change = -1
+                        jump_sound = pygame.mixer.Sound("sprites/jump.wav")
+                        jump_sound.play()
             if dino_state == "jump":
                 if event.type == pygame.KEYUP:
                     if event.key == pygame.K_SPACE:
